@@ -14,7 +14,11 @@ export const glider = (size) => {
 
 export const addCell = (field, x, y) => {
   const f = field;
-  f[y][x] = 1;
+  if (f[y][x] === 0) {
+    f[y][x] = 1;
+  } else {
+    f[y][x] = 0;
+  }
   return f;
 };
 
